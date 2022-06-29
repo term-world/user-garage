@@ -6,32 +6,32 @@ DOOR = dotenv_values('.door')
 
 def make_muck(muck: str):
     gitit.grab_file(
-        f"https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/garage-interior/dirty-garage-floor/{muck}.py",
-        f"garage-interior/dirty-garage-floor/{muck}.py"
+        f"https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/dirty-garage-floor/{muck}.py",
+        f"dirty-garage-floor/{muck}.py"
         )
 
 def main():
     print()
     note_exists = os.path.exists("garage-door-note.md")
     if note_exists == True:
-        garage_interior_exists = os.path.exists("/garage-interior")
+        garage_interior_exists = os.path.exists("robo-vac.py")
         if garage_interior_exists == True:
-            print("The door's already unlocked. Not much else to see here.")
+            print("The power's already turned on. Not much else to see here.")
             print()
         else:
             user_code = input("Please enter 4-digit passcode: ")
             print()
             if user_code == DOOR["CODE"]:
-                print("Unlocking garage...")
+                print("WELCOME TO THE WORKSHOP. ENGAGING POWER PROTOCOLS.")
+                print()
+                print("Vibrations suddenly rock the floor and you hear a whirring sound start up all around you.")
                 print()
 
-                # Create add'l garage directories
-                os.mkdirs("garage-interior/dirty-garage-floor")
 
                 # Add files to garage-interior directory
-                gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/garage-interior/.vac-eq", "garage-interior/.vac-eq")
-                gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/garage-interior/robo-vac.py", "garage-interior/robo-vac.py")
-                gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/garage-interior/vacuum-instructions.md", "garage-interior/vacuum-instructions.md")
+                gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/.vac-eq", ".vac-eq")
+                gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/robo-vac.py", "robo-vac.py")
+                gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/vacuum-instructions.md", "vacuum-instructions.md")
 
                 # Add files to dirty-garage-floor directory
                 make_muck("a-few-loose-screws")
@@ -39,6 +39,10 @@ def main():
                 make_muck("art-deco-book")
                 make_muck("beadless-abacus")
                 make_muck("beanbag")
+                print("WORKSHOP 5% POWERED.")
+                print()
+                print("...5%? You suspect this might take a minute.")
+                print()
                 make_muck("bolts")
                 make_muck("box-shaped-jello")
                 make_muck("brass-tacks")
@@ -59,6 +63,10 @@ def main():
                 make_muck("dirt")
                 make_muck("dirty-sock")
                 make_muck("dust")
+                print("WORKSHOP 25% POWERED.")
+                print()
+                print("The lights still haven't turned on. You twiddle your thumbs.")
+                print()
                 make_muck("earring-stud")
                 make_muck("empty-seltzer-can")
                 make_muck("enigmatic-invention")
@@ -84,6 +92,11 @@ def main():
                 make_muck("maybe-chocolate")
                 make_muck("mood-ring")
                 make_muck("motivational-cat-poster")
+                print("WORKSHOP 50% POWERED.")
+                print()
+                print("You can almost feel the steady hum of electricity all around you.")
+                print("Just what is this place?")
+                print()
                 make_muck("mummified-flea")
                 make_muck("mysterious-cable")
                 make_muck("note-to-self")
@@ -109,6 +122,10 @@ def main():
                 make_muck("rusty-bucket")
                 make_muck("rusty-nail")
                 make_muck("sandwich-crust")
+                print("WORKSHOP 75% POWERED.")
+                print()
+                print("You hum a little tune. You're actually getting a little nervous.")
+                print()
                 make_muck("second-rusty-nail")
                 make_muck("settlers-of-batan")
                 make_muck("shipping-label")
@@ -133,27 +150,37 @@ def main():
                 make_muck("walkman")
                 make_muck("worn-tread")
                 make_muck("yellow-guitar-pick")
-                
-                print("Welcome.")
+                print("WORKSHOP 100% POWERED.")
                 print()
+                print("Suddenly, the lights in the garage power on.")
+                print("You were expecting some great spectacle with all that hullabaloo.")
+                print("But all you see...is junk.")
+                print("Like, lots of it. It's kinda gross, really.")
+                print()
+                print("But over in the corner you see something else, a little metal cube.")
+                print("Might be worth checking out.")
+                
             else:
                 print("Sorry, that is incorrect.")
                 print()
     else:
-        print("The garage door is firmly locked.")
-        print("You see a keypad that takes a 4-digit code...")
-        print("...but you don't remember The Landlord giving you any codes...")
+        print("The garage is pitch black inside. You flick a nearby light switch, but nothing happens.")
+        print("Next to the light switch, you see a dimly glowing keypad that appears to take a 4-digit code...")
+        print('...along with the label "FOR GARAGE POWER".')
         print()
-        print("However, you do see a note taped on the door.")
+        print("Frustratingly, you don't remember the Landlord giving you any codes.")
+        print()
+        print("However, you do see a note in his handwriting taped next to the keypad.")
+        print("You can sorta read it from the light coming in from the open door.")
         print()
         gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/garage-door-note.md", "garage-door-note.md")
-        print("Attached to the note are two small...thingies? They're hard to describe.")
+        print("Clipped to the note are two small...thingies? They're hard to describe.")
         print("They're small machines of some sort.")
         print("Maybe the note will shed some light on this whole situation.")
         print()
         gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/thingy-one.py", "thingy-one.py")
         gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/thingy-two.py", "thingy-two.py")
-        print("~There are some new files in the garage-exterior folder worth checking out via your File Explorer!~")
+        print("~There are some new files in the garage folder worth checking out via your File Explorer!~")
         print()
 
 if __name__ == "__main__":
