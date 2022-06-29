@@ -153,6 +153,8 @@ def main():
         print()
         gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/thingy-one.py", "thingy-one.py")
         gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/thingy-two.py", "thingy-two.py")
+        print("~There are some new files in the garage-exterior folder worth checking out via your File Explorer!~")
+        print()
 
 if __name__ == "__main__":
     main()
