@@ -28,10 +28,13 @@ def main():
                 print()
 
 
-                # Add files to garage-interior directory
+                # Add files to garage directory
                 gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/.vac-eq", ".vac-eq")
                 gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/robo-vac.py", "robo-vac.py")
-                gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/vacuum-instructions.md", "vacuum-instructions.md")
+                gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/robo-vac-instructions.md", "vacuum-instructions.md")
+
+                # Create the garage floor
+                os.mkdir("dirty-garage-floor")
 
                 # Add files to dirty-garage-floor directory
                 make_muck("a-few-loose-screws")
@@ -94,7 +97,7 @@ def main():
                 make_muck("motivational-cat-poster")
                 print("WORKSHOP 50% POWERED.")
                 print()
-                print("You can almost feel the steady hum of electricity all around you.")
+                print("You can almost *feel* the steady hum of electricity all around you.")
                 print("Just what is this place?")
                 print()
                 make_muck("mummified-flea")
@@ -159,6 +162,7 @@ def main():
                 print()
                 print("But over in the corner you see something else, a little metal cube.")
                 print("Might be worth checking out.")
+                print()
                 
             else:
                 print("Sorry, that is incorrect.")
