@@ -2,7 +2,7 @@ import os
 import gitit
 from dotenv import dotenv_values
 
-DOOR = dotenv_values('.door')
+PAD = dotenv_values('.pad')
 
 def make_muck(muck: str):
     gitit.grab_file(
@@ -21,12 +21,11 @@ def main():
         else:
             user_code = input("Please enter 4-digit passcode: ")
             print()
-            if user_code == DOOR["CODE"]:
+            if user_code == PAD["CODE"]:
                 print("WELCOME TO THE WORKSHOP. ENGAGING POWER PROTOCOLS.")
                 print()
                 print("Vibrations suddenly rock the floor and you hear a whirring sound start up all around you.")
                 print()
-
 
                 # Add files to garage directory
                 gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/.vac-eq", ".vac-eq")
@@ -177,7 +176,7 @@ def main():
         print("However, you do see a note in his handwriting taped next to the keypad.")
         print("You can sorta read it from the light coming in from the open door.")
         print()
-        gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/garage-door-note.md", "garage-door-note.md")
+        gitit.grab_file("https://raw.githubusercontent.com/term-world/world-additions/main/week-1-additions/garage-keypad-note.md", "garage-keypad-note.md")
         print("Clipped to the note are two small...thingies? They're hard to describe.")
         print("They're small machines of some sort.")
         print("Maybe the note will shed some light on this whole situation.")
