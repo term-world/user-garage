@@ -2,7 +2,7 @@ import os
 import gitit
 from dotenv import dotenv_values
 
-DOOR = dotenv_values('.door')
+PAD = dotenv_values('.pad')
 
 def make_muck(muck: str):
     gitit.grab_file(
@@ -21,7 +21,7 @@ def main():
         else:
             user_code = input("Please enter 4-digit passcode: ")
             print()
-            if user_code == DOOR["CODE"]:
+            if user_code == PAD["CODE"]:
                 print("WELCOME TO THE WORKSHOP. ENGAGING POWER PROTOCOLS.")
                 print()
                 print("Vibrations suddenly rock the floor and you hear a whirring sound start up all around you.")
